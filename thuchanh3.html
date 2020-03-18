@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+    <title>Hình tròn ngẫu nhiên</title>
 <body>
+<canvas id="myCanvas" width="1368" height="768" style="border: 1px solid #d3d3d3;"></canvas>
+<script>
+    let initCircle = function (x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    };
 
+    function getRandomColor() {
+        let red = Math.floor(Math.random()*255);
+        let green = Math.floor(Math.random()*255);
+        let blue = Math.floor(Math.random()*255);
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+    console.log(getRandomColor());
+
+    function randomCircle() {
+        let Circle = document.getElementById('myCanvas').getContext('2d');
+        let radius = Math.random() * 80;
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        let color = getRandomColor();
+        let circle = new initCircle(x, y, radius);
+        console.log(color);
+        Circle.beginPath();
+        Circle.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        Circle.fillStyle = color;
+        Circle.fill();
+    }
+
+    function manyCircles() {
+        for (let i = 0; i < 30; i++) {
+            randomCircle();
+        }
+    }
+    manyCircles();
+</script>
 </body>
 </html>
