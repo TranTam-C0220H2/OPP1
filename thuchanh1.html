@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+<input type="date" id="myToday">
+<button onclick="setDate()">Đặt lại thời gian</button>
+<script>
+    let initMyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay = function () {
+            return this.day;
+        };
+        this.getMonth = function () {
+            return this.month;
+        };
+        this.getYear = function () {
+            return this.year;
+        };
+        this.setDay = function (day) {
+
+            this.day = day;
+        };
+        this.setMonth = function (month) {
+            this.month = month;
+        };
+        this.setYear = function (year) {
+            this.year = year;
+        };
+    };
+
+    function setDate() {
+        let date = new initMyDate();
+        let x = document.getElementById('myToday').value;
+        console.log(x[8] + x[9]);
+        date.setDay(x[8] + x[9]);
+        date.setMonth(x[5] + x[6]);
+        date.setYear(x[0] + x[1] + x[2] + x[3]);
+        let day = date.getDay();
+        let month = date.getMonth();
+        let year = date.getYear();
+        alert('Hôm này là ngày ' + day + ' tháng ' + month + ' năm ' + year);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp hình tròn</title>
+</head>
+<body>
+<label>Bán kính: <input type="number" id="myRadius"></label>
+<button onclick="checkArea()">Diện tích hình tròn</button>
+<span id="isArea"></span>
+<script>
+    function checkArea() {
+        let Circle = function (radius) {
+            radius = document.getElementById('myRadius').value;
+            this.getArea = function () {
+                return Math.PI * radius * radius;
+            };
+        };
+        let circle = new Circle();
+        let Area = circle.getArea();
+        document.getElementById('isArea').innerHTML = Area;
+    }
+</script>
+</body>
+</html>
