@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Hình tròn ngẫu nhiên</title>
 <body>
-<canvas id="myCanvas" width="1368" height="768" style="border: 1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvas" width="1368" height="768" style="border: 1px solid #d3d3d3;" onclick="isClick()"></canvas>
 <script>
     let initCircle = function (x, y, radius) {
         this.x = x;
@@ -18,7 +18,6 @@
         let blue = Math.floor(Math.random()*255);
         return "rgb(" + red + "," + blue + "," + green + ")";
     }
-    console.log(getRandomColor());
 
     function randomCircle() {
         let Circle = document.getElementById('myCanvas').getContext('2d');
@@ -27,7 +26,6 @@
         let y = Math.random() * window.innerHeight;
         let color = getRandomColor();
         let circle = new initCircle(x, y, radius);
-        console.log(color);
         Circle.beginPath();
         Circle.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
         Circle.fillStyle = color;
@@ -40,6 +38,11 @@
         }
     }
     manyCircles();
+    let imgObj = null;
+    function isClick() {
+        imgObj = randomCircle();
+        imgObj.left = parseInt(imgObj.left) + 10 + 'px';
+    }
 </script>
 </body>
 </html>

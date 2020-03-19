@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<input type="number" id="isLength">
+<input type="number" id="isWidth">
+<button onclick="checkCircle()">Kiểm tra</button>
+<canvas id="myCanvas" width="1000" height="500" style="border: solid 1px #000000"></canvas>
+<script>
+    function Rectangle(myLength, myWidth) {
+        this.myLength = myLength;
+        this.myWidth = myWidth;
+        this.isArea = function () {
+            return this.myLength * this.myWidth;
+        };
+        this.isPerimeter = function () {
+            return (this.myLength + this.myWidth) * 2;
+        };
+        this.isPicture = function () {
+            let Picture = document.getElementById('myCanvas').getContext('2d');
+            Picture.fillStyle = "#FF0000";
+            Picture.fillRect(100, 100, myLength, myWidth);
+        };
+    }
+
+    function checkCircle() {
+        let x = +document.getElementById('isLength').value;
+        let y = +document.getElementById('isWidth').value;
+        let rectangle = new Rectangle(x, y);
+        let area = rectangle.isArea();
+        let perimeter = rectangle.isPerimeter();
+        rectangle.isPicture();
+        alert('Diện tích hình chữ nhật: ' + area);
+        alert('Chu vi hình chữ nhật: ' + perimeter);
+    }
+</script>
+</body>
+</html>
