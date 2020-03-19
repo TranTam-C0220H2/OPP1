@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08ca7926-ebc9-461d-aa89-dcc5bea04a6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/baitap1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baitap2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thuchanh3.html" beforeDir="false" afterPath="$PROJECT_DIR$/thuchanh3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baitap1.html" beforeDir="false" afterPath="$PROJECT_DIR$/baitap1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
       <workItem from="1584532002458" duration="18064000" />
       <workItem from="1584580228999" duration="611000" />
       <workItem from="1584592101915" duration="5936000" />
-      <workItem from="1584625760839" duration="440000" />
+      <workItem from="1584625760839" duration="1855000" />
     </task>
     <servers />
   </component>
